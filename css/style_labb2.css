@@ -3,16 +3,15 @@
 /*------------------------------------*/
 *{
 	margin: 0;
-	/*box-sizing: border-box;*/
 }
 /*------------------------------------------------------------*/
 body{
 	/*------------------------------------*/
 	/*------Body som Flex_Container-------*/
 	/*------------------------------------*/
-	
 	display: flex;
 	flex-direction: column;
+	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
 /*------------------------------------------------------------*/
@@ -22,31 +21,46 @@ header{
 	/*------------------------------------*/
 	/*----Header som Flex_Item av Body----*/
 	/*------------------------------------*/
-
-	background: grey;
+	background: pink;
 	/*------------------------------------*/
 	/*------Header som Flex_Container-----*/
 	/*------------------------------------*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	flex-basis: 150px;
+
 }
-header h1 {
+header h1{
+
+	/*flex-basis: 50px;*/
+	/*padding: 30px;*/
+
 }
 header a{
-}
 
 }
 /*------------------------------------------------------------*/
-
-main{
+main {
 	/*------------------------------------*/
 	/*------Main som Flex_Item av Body----*/
 	/*------------------------------------*/
-
-
+	background: grey;
 	/*------------------------------------*/
 	/*------Main som Flex_Container-------*/
 	/*------------------------------------*/
-
+	padding: 40px 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: stretch;
 }
-.poster{
-
+main img {
+	flex-grow: 1;
+	margin: 20px;
+	width: 150px;
 }
