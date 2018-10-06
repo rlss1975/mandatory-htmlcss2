@@ -4,86 +4,72 @@
 *{
 	margin: 0;
 	font-family: 'Allerta Stencil', sans-serif;
-
 }
-/*------------------------------------------------------------*/
 body{
-	/*------------------------------------*/
 	/*------Body som Flex_Container-------*/
-	/*------------------------------------*/
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
-/*------------------------------------------------------------*/
 }
-header{
 
-	/*------------------------------------*/
+/*------------------------------------*/
+/*------------HEAD--------------------*/
+/*------------------------------------*/
+
+header{
 	/*----Header som Flex_Item av Body----*/
-	/*------------------------------------*/
 	background: pink;
-	/*------------------------------------*/
 	/*------Header som Flex_Container-----*/
-	/*------------------------------------*/
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: center;
 	flex-basis: 150px;
-
-	
-
 }
 header h1{
-	
+	/*----H1 som Flex_Item av Header----*/
 	margin-left: 40px;
 	font-size: 45px;
 	font-weight: 400;
 	flex-grow: 0.1;
-	
-	/*margin-left: 40px;*/
-	/*flex-basis: 50px;*/
-	/*padding: 30px;*/
-	
+	white-space: nowrap;
 }
 header nav{
-	
-	
-	
-
-	/*------------------------------------*/
+	/*----nav som Flex_Item av Header----*/
+	flex-grow: 0.15;
+	padding-top: 20px;
 	/*------Nav som Flex_Container-----*/
-	/*------------------------------------*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding-top: 20px;
-	flex-grow: 0.2;
-	font-size: 20px;
-	font-weight: 600;
-	
-
-
-
-
 }
 a{
-text-decoration-line: none;
-
-
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration-line: none;
+	white-space: nowrap;
 }
-/*------------------------------------------------------------*/
+@media screen and (max-width: 699px) {
+	header nav{
+		display:none;
+}
+	header h1{
+		margin:0 auto;
+
+	}
+}
+	
+
+/*------------------------------------*/
+/*------------MAIN--------------------*/
+/*------------------------------------*/
 main {
-	/*------------------------------------*/
 	/*------Main som Flex_Item av Body----*/
-	/*------------------------------------*/
 	background: grey;
-	/*------------------------------------*/
 	/*------Main som Flex_Container-------*/
-	/*------------------------------------*/
 	padding: 40px 20px;
 	display: flex;
 	flex-direction: row;
@@ -93,6 +79,8 @@ main {
 	align-content: stretch;
 }
 main img {
+	/*----img som Flex_Item av Main----*/
+	border-radius: 5%;
 	flex-grow: 1;
 	margin: 20px;
 	width: 150px;
