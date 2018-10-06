@@ -4,6 +4,7 @@
 *{
 	margin: 0;
 	font-family: 'Allerta Stencil', sans-serif;
+	color: #977492;
 }
 body{
 	/*------Body som Flex_Container-------*/
@@ -13,14 +14,12 @@ body{
 	justify-content: flex-start;
 	align-items: stretch;
 }
-
 /*------------------------------------*/
 /*------------HEAD--------------------*/
 /*------------------------------------*/
-
 header{
 	/*----Header som Flex_Item av Body----*/
-	background: pink;
+	background: #1e1a1a;
 	/*------Header som Flex_Container-----*/
 	display: flex;
 	flex-direction: row;
@@ -41,7 +40,7 @@ header nav{
 	/*----nav som Flex_Item av Header----*/
 	flex-grow: 0.15;
 	padding-top: 20px;
-	/*------Nav som Flex_Container-----*/
+	/*------Nav som Flex_Container-------*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -52,13 +51,13 @@ a{
 	text-decoration-line: none;
 	white-space: nowrap;
 }
-@media screen and (max-width: 699px) {
+/*--Headers Beteende under 700px screen bred--*/
+@media screen and (max-width: 699px){
 	header nav{
 		display:none;
-}
+	}
 	header h1{
 		margin:0 auto;
-
 	}
 }
 	
@@ -68,7 +67,7 @@ a{
 /*------------------------------------*/
 main {
 	/*------Main som Flex_Item av Body----*/
-	background: grey;
+	background: #1e1e1e;
 	/*------Main som Flex_Container-------*/
 	padding: 40px 20px;
 	display: flex;
@@ -80,8 +79,9 @@ main {
 }
 main img {
 	/*----img som Flex_Item av Main----*/
-	border-radius: 5%;
 	flex-grow: 1;
 	margin: 20px;
 	width: 150px;
+	border-radius: 5%;
+	box-shadow: 0px 0px 15px 0px #977492;
 }
